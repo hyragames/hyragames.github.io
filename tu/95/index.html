@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TU-95</title>
+    <style>
+    #container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+      }
+      .homebtn {
+      color:white;
+      font-family:"Arial";
+      }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0; background-color:black;">
+<p style="text-align:center;"><a class="homebtn" href="/">Home<a></p>
+    <div
+      id="container"
+      style="position: absolute; width: auto; height: auto; inset: 0"
+    ></div>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script>
+      window.RufflePlayer = window.RufflePlayer || {};
+      window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        player.style.width = "670px";
+        player.style.height = "450px";
+        container.appendChild(player);
+        player.load("https://cdn.jsdelivr.net/gh/I4LYT/akgeniushourcdn@latest/tu-95.swf");
+      });
+      window.RufflePlayer = window.RufflePlayer || {};
+window.RufflePlayer.config = {
+"backgroundColor": "#000000",
+"autoplay": "on",
+};
+    </script>
+  </body>
+</html>
