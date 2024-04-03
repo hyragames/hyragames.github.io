@@ -1,0 +1,42 @@
+<html><head></head><body><h1></h1>
+    <p style="text-align:center"><a>Open In about:blank!</a></p>
+<!--Made by L1FE-->
+<!--Made specifally for <a> elements-->
+    <script>
+        var urlObj = new window.URL(window.location.href);
+        var url = "/";
+     
+        if (url) {
+            var win;
+     
+            document.querySelector('a').onclick = function() {
+                if (win) {
+                    win.focus();
+                }
+                else {
+                    win = window.open();
+                    win.document.body.style.margin = '0';
+                    win.document.body.style.height = '100vh';
+                    var iframe = win.document.createElement('iframe');
+                    iframe.referrerpolicy = "no-referrer";
+                    iframe.style.border = 'none';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.margin = '0';
+                    iframe.src = url;
+                    win.document.body.appendChild(iframe);
+                document.querySelector('a').innerHTML="Page Opened, refresh page.";
+                }
+            };
+        }
+    </script>
+    <style>
+    * {
+        color:white;
+        font-family:"Arial";
+        text-decoration: underline;
+    }
+    </style>
+    </body></html>
+         
+    </style></body></html>
